@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="administrator">
+	<name>Missing Metadata Items</name>
+	<author>Dan Rahmel</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>(C) 2009 Dan Rahmel. All rights reserved.</copyright>
+	<authorEmail>admin@joomlajumpstart.org</authorEmail>
+	<authorUrl>www.joomlajumpstart.org</authorUrl>
+	<version>1.0.0</version>
+	<description>Module to display any articles that have missing 
+	metadescription or metakeywords fields.</description>
+	<files>
+		<filename module="mod_missingmeta">mod_missingmeta.php</filename>
+	</files>
+</install>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+	<name>SuggestionBox</name>
+	<author>Dan Rahmel</author>
+	<version>1.0.0</version>
+	<description>Displays a suggestions form and records suggestions in the jos_suggestion table.</description>
+	<files>
+		<filename component="com_suggestionbox">suggestionbox.php</filename>    	
+	</files>
+	<administration>
+		<menu>Suggestion Box</menu>
+		<files>
+			<filename component="com_suggestionbox">suggestionbox.php</filename>    	
+		</files>
+	</administration>
+
+</install>
+

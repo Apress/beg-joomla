@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>Hello Joomla template</name>
+	<description>Simplest template in the Joomla world.</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+</install>

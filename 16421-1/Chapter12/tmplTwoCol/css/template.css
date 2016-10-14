@@ -1,0 +1,84 @@
+
+div#logo {
+	width: 110%; height: 157px;
+	margin-left: -10px;
+	margin-bottom: 10px;
+	background: url(../images/EVlogo.png) left no-repeat;
+	border: 1px solid #244223 ;
+	padding: 0px;
+}
+
+#col1 {
+	float:left;width:20%;
+	display:inline;
+	background:#244223;
+	padding: 10px;
+} 
+
+#col2 {
+	float:right;width:75%;
+	display:inline;
+	border:3px solid #244223;
+	background:#58a155;
+	padding: 10px;
+} 
+
+#container {
+	float:left;width:85%;
+	display:inline;
+}
+
+#myclear {
+	clear:both;
+}
+
+#page_bg {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height: 100%;
+	background: black;
+}
+
+.moduletable_menu, .moduletable
+{
+	color: white;
+	border-bottom: 1px solid #fff;
+	margin-bottom: -1em;
+}
+
+.moduletable_menu h3 {
+	border-bottom: 1px solid #FFFFFF;
+	margin-bottom: 0px;
+}
+
+.moduletable_menu ul {
+	margin-left: 10px;
+	margin-top: 0px;
+	padding: 10px;
+	font-size: 80%;	
+	list-style-type: square;
+}
+
+.moduletable_menu a:link, .moduletable a:link {
+	color:yellow;
+}
+
+.moduletable_menu a:visited, .moduletable a:visited {
+	color:cornsilk;
+}
+
+.contentheading {
+	border-bottom: 2px solid Black;
+	border-right: 2px solid Black;
+	border-left: 1px solid LightGreen;
+	border-top: 1px solid LightGreen;
+	background:#244223;
+	color: white;
+	padding: 10px;
+	font-size:2em;
+}
+
+.contentpaneopen h1 {
+	font-size:1.5em;
+	border-bottom: 1px solid #244223;
+	padding: 10px;
+}	

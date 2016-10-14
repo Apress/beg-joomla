@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>Two Column template</name>
+	<version>1.0</version>
+	<creationDate>04/21/2009</creationDate>
+	<author>Dan Rahmel</author>
+	<authorEmail>admin@joomlaJumpstart.com</authorEmail>
+	<authorUrl>http://www.joomlaJumpstart.com </authorUrl>
+	<copyright>2009</copyright>
+	<license>GNU/GPL</license>
+	<description>Two CSS columns in the Joomla world.</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>images/LSlogo.jpg</filename>
+		<filename>css/template.css</filename>
+	</files>
+	<positions>
+		<position>left</position>
+	</positions>
+</install>

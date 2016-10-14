@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		<!--
+		function rgbChange () {
+			updateSample();
+		}
+		
+		function testVal(testField) {
+			if(isNaN(testField)) { testField = 0; }
+			if(testField<0) { testField = 0; }
+			if(testField>255) { testField = 255; }
+			return (testField);
+		}
+		
+		function toHexStr(decVal) {
+			if(decVal<16) strVal="0";
+			else strVal="";
+			strVal += (decVal-0).toString(16);
+			return(strVal);
+		}
+		
+		function updateSample() {
+			//getObjectByID("sample").style.backgroundColor = '#FF0000';
+			r = testVal(document.frmRGB.R.value)
+			g = testVal(document.frmRGB.G.value)
+			b = testVal(document.frmRGB.B.value)
+			hexStr = "#" + toHexStr(r) + toHexStr(g) + toHexStr(b);
+			document.frmHex.hexVal.value = hexStr;
+			document.bgColor=hexStr;
+		}
+		
+		function convertHSB() {
+			h = document.frmHSB.H.value/360
+			s = document.frmHSB.S.value/100
+			v = document.frmHSB.B.value/100
+			hi = parseInt(h*6);
+			f=1;
+			var_h = h * 6;
+			var_i = Math.floor(hi);
+		
+			p = v*(1-s);
+			q = v*(1-s*(var_h - var_i));
+			t = v*(1-s*(1 - (var_h - var_i))); 
+		
+			switch(hi){
+				case 0: r=v; g=t; b=p; break;
+				case 1: r=q; g=v; b=p; break;
+				case 2:	r=p; g=v; b=t; break;
+				case 3: r=p; g=q; b=v; break;
+				case 4: r=t; g=p; b=v; break;
+				case 5: r=v; g=p; b=q; break;
+			}
+			document.frmRGB.R.value = Math.round(r*255);
+			document.frmRGB.G.value = Math.round(g*255); 
+			document.frmRGB.B.value = Math.round(b*255);	
+			updateSample();
+		}
+		
+		function convertRGB() {
+			r = testVal(document.frmRGB.R.value)/255
+			g = testVal(document.frmRGB.G.value)/255
+			b = testVal(document.frmRGB.B.value)/255
+			
+			v = Math.max(r, g, b);
+			myMin = Math.min(r, g, b); 
+			if(v==0) s=0;
+			else s=1-(myMin/v);
+			
+			if(v==myMin) h=0;
+			else 
+				switch(v){
+					case r: 
+						if(g>=b) h=60*((g-b)/(v-myMin));
+						else h=60*((g-b)/(v-myMin))+360;
+						break;
+					case g: 
+						h = 60*((b-r)/(v-myMin))+120;
+						break;
+					case b:
+						h = 60*((r-g)/(v-myMin))+240;
+						break;
+				}
+			document.frmHSB.H.value = Math.round(h);
+			document.frmHSB.S.value = Math.round(s*100); 
+			document.frmHSB.B.value = Math.round(v*100);	
+		}
+		-->
+		</script>
+	</head>
+	<body>
+		<h1>RGB/HSB Convert</h1>
+		<table width="200" border="1" bgcolor="#FFFFFF">
+		  <tr> <td>
+		  <form name="frmRGB" id="frmRGB">
+		     <label>R (0-255)
+		       <input name="R" type="text" id="R" accesskey="R"
+			 onKeyUp	=javascript:rgbChange(); value="255" size="5">
+		     </label><p>
+		     <label>G (0-255)
+		       <input name="G" type="text" id="G" accesskey="R"
+			   onKeyUp	=javascript:rgbChange(); value="0" size="5">
+		     </label></p><p>
+		     <label>B (0-255)
+		       <input name="B" type="text" id="B" accesskey="R" 
+			   onKeyUp	=javascript:rgbChange(); value="0" size="5">
+		     </label></p><p>
+		     <label>
+		       <input name="cmdConvertRGB" TYPE="button"
+			   value="Convert &gt;" onclick="javascript:convertRGB();">
+		     </label></p>
+		  </form></td><td>
+		  <form name="frmHSB" id="frmHSB">
+		    <label>H
+		      <input name="H" type="text" id="H" size="5">
+		    </label><p>
+		    <label>S
+		      <input name="S" type="text" id="S" size="5">
+		    </label></p><p>
+		    <label>B
+		      <input name="B" type="text" id="B" size="5">
+		    </label></p><p>
+		    <label>
+		      <input name="cmdConvertHSB" TYPE="button"
+			  value="Convert &lt;" onclick=javascript:convertHSB()>
+		    </label></p>
+		  </form></td></tr>
+		  <tr><td>
+		  <form action="" method="post" name="frmHex" id="frmHex">
+		    <label>Hex
+		      <input name="hexVal" type="text" id="hexVal">
+		    </label>
+		  </form></td>
+		  <td>&nbsp;</td>
+		  </tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Hello From dan</name>
+	<author>Dan Rahmel</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>(C) 2009 Dan Rahmel. All rights reserved.</copyright>
+	<authorEmail>admin@joomlajumpstart.org</authorEmail>
+	<authorUrl>www.joomlajumpstart.org</authorUrl>
+	<version>1.0.0</version>
+	<description>Module that displays the date/time of the server. <p />Be sure to set the Location parameter in the Module Manager.</description>
+	<files>
+		<filename module="mod_hellofrom">mod_hellofrom.php</filename>
+	</files>
+	<params>
+		<param name="location" type="text" default="Los Angeles, CA" label="Server Location"  description="The location of the server." />
+	</params>
+</install>
+
